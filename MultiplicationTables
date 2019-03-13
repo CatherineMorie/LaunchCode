@@ -1,0 +1,21 @@
+package org.launchcode;
+import java.util.Scanner;
+
+public class MultiplicationTables {
+
+    public static void main(String[] args){
+        System.out.println("Welcome to Multiplication Tables\n");
+        System.out.print("How large would you like to see them? ");
+        Scanner keyboard = new Scanner(System.in);
+        int firstNumber = 0;
+
+        for (int size = keyboard.nextInt(); firstNumber <= size; firstNumber++){
+            int secondNumber = 0;
+            System.out.println(firstNumber + " * " + secondNumber + " = " + firstNumber*secondNumber);
+            do {
+                secondNumber++;
+                System.out.println(firstNumber + " * " + secondNumber + " = " + firstNumber*secondNumber);
+            } while (secondNumber < size);
+        }
+    }
+}
